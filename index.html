@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>DIAMOND CITY RP S3</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Cairo:wght@600&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:'Cairo',sans-serif;
+background:#020b2c;
+color:white;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:url("img3.webp") center/cover no-repeat;
+position:relative;
+}
+.hero::after{
+content:"";
+position:absolute;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,.65);
+}
+.hero-content{
+position:relative;
+z-index:2;
+text-align:center;
+top:50%;
+transform:translateY(-50%);
+}
+.hero h1{
+font-family:'Orbitron',sans-serif;
+color:#00ccff;
+font-size:40px;
+text-shadow:0 0 25px #00ccff;
+}
+.hero p{
+font-size:18px;
+margin:15px 0;
+}
+.hero button{
+background:#00ccff;
+border:none;
+padding:15px 45px;
+border-radius:40px;
+font-size:18px;
+cursor:pointer;
+box-shadow:0 0 25px #00ccff;
+}
+
+/* SECTION */
+section{
+padding:60px 20px;
+text-align:center;
+}
+section h2{
+color:#00ccff;
+margin-bottom:30px;
+}
+
+/* GALLERY */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+.gallery img{
+width:100%;
+border-radius:20px;
+box-shadow:0 0 25px rgba(0,204,255,.6);
+transition:.4s;
+}
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* SLIDER */
+.slider{
+position:relative;
+max-width:900px;
+margin:auto;
+}
+.slide{
+display:none;
+}
+.slide img{
+width:100%;
+border-radius:20px;
+box-shadow:0 0 30px #00ccff;
+}
+
+/* FOOTER */
+footer{
+background:black;
+padding:15px;
+text-align:center;
+color:#00ccff;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>💎 DIAMOND CITY RP S3 💎</h1>
+    <p>أفضل سيرفر رول بلاي SA-MP | تجربة واقعية عالمية</p>
+    <button>دخول المدينة</button>
+  </div>
+</div>
+
+<!-- SLIDER -->
+<section>
+<h2>🌍 لقطات من المدينة</h2>
+<div class="slider">
+  <div class="slide"><img src="img1.webp"></div>
+  <div class="slide"><img src="img2.webp"></div>
+  <div class="slide"><img src="img3.webp"></div>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section>
+<h2>🔥 DIAMOND CITY WORLD</h2>
+<div class="gallery">
+  <img src="img1.webp">
+  <img src="img2.webp">
+  <img src="img3.webp">
+</div>
+</section>
+
+<footer>
+© DIAMOND CITY ROLEPLAY 2025 - 2026
+</footer>
+
+<script>
+let index=0;
+const slides=document.querySelectorAll(".slide");
+function show(){
+slides.forEach(s=>s.style.display="none");
+index++;
+if(index>slides.length){index=1}
+slides[index-1].style.display="block";
+}
+show();
+setInterval(show,3000);
+</script>
+
+</body>
+</html>
